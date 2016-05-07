@@ -1,0 +1,10 @@
+{
+  "ambientDependencies": {
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-graphql": "registry:dt/express-graphql#0.0.0+20160316155526",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160322035842",
+    "node": "registry:dt/node#4.0.0+20160505172921",
+    "sequelize": "registry:dt/sequelize#3.4.1+20160423143634",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160501131543"
+  }
+}

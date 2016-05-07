@@ -7,7 +7,46 @@ In this case, we expose a relational database via GraphQL, though this could as 
 
 Instead of postgres, we've gone with sqlite as it's more lightweight, and doesn't require any prerequisites apart from what's in this repo.
 
+## Installation
 
+Install our node dependencies:
+
+    # presumes you have node and npm
+    npm install
+    
+Our editor of choice is [Visual Studio Code](https://code.visualstudio.com/Docs/languages/javascript#_javascript-projects-jsconfigjson), and as we want to use intellisense, we'll install the various typescript definitions:
+
+    # install typings so we can use typescript type definitions
+    # https://code.visualstudio.com/Docs/runtimes/nodejs#_typings
+    npm install -g typings
+
+    # Use typings to search for and install typescript definitions for node
+    typings search node
+    typings install node --ambient --save
+
+    # Use typings to install type definitions for express
+    typings install express serve-static express-serve-static-core --ambient --save
+
+    typings search GraphQL
+    typings install express-graphql --ambient --save
+
+    typings search sequelize
+    typings install sequelize --ambient --save
+
+The typings definitions get used as we've got a `jsconfig.json` file that indicates to Visual Studio Code that we're using Typescript for ES6 commonjs modules:
+
+    {
+        "compilerOptions": {
+            "target": "ES6",
+            "module": "commonjs",
+            "allowSyntheticDefaultImports": true
+        },
+        "exclude": [
+            "node_modules"
+        ]
+    }
+
+     
 ## Create a database with sample data:
 
     npm run db
