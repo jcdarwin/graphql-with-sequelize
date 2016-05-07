@@ -35,8 +35,7 @@ The following starts our express server, which populates our database afresh wit
 
 Once started, we can perform queries in the GraphiQL interface:
 
-A potted query for posts:
-http://localhost:3000/graphql?query=%7B%0A%20%20posts%20%7B%0A%20%20%20%20title%0A%20%20%20%20person%20%7B%0A%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20lastName%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A
+[A potted query for posts](http://localhost:3000/graphql?query=%7B%0A%20%20posts%20%7B%0A%20%20%20%20title%0A%20%20%20%20person%20%7B%0A%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20lastName%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A):
 
     {
         posts {
@@ -48,8 +47,7 @@ http://localhost:3000/graphql?query=%7B%0A%20%20posts%20%7B%0A%20%20%20%20title%
         }
     }
 
-A potted query for people:
-http://localhost:3000/graphql?query=%7B%0A%20%20people%20%7B%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%20%20email%0A%20%20%20%20posts%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%20%20content%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A
+[A potted query for people](http://localhost:3000/graphql?query=%7B%0A%20%20people%20%7B%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%20%20email%0A%20%20%20%20posts%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%20%20content%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A):
 
     {
         people {
@@ -63,8 +61,7 @@ http://localhost:3000/graphql?query=%7B%0A%20%20people%20%7B%0A%20%20%20%20first
         }
     }
 
-A potted mutation to create a new person: 
-http://localhost:3000/graphql?query=mutation%20addPerson%20%7B%0A%20%20addPerson(firstName%3A%20%22Jason%22%2C%20lastName%3A%20%22Darwin%22%2C%20email%3A%20%22jcdarwin%40gmail.com%22)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D%0A&operationName=addPerson
+[A potted mutation to create a new person](http://localhost:3000/graphql?query=mutation%20addPerson%20%7B%0A%20%20addPerson(firstName%3A%20%22Jason%22%2C%20lastName%3A%20%22Darwin%22%2C%20email%3A%20%22jcdarwin%40gmail.com%22)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D%0A&operationName=addPerson): 
 
     mutation addPerson {
         addPerson(firstName: "Jason", lastName: "Darwin", email: "jcdarwin@gmail.com") {
