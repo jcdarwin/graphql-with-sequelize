@@ -7,8 +7,9 @@ const Conn = new Sequelize(
   'postgres',
   'postgres',
   {
-    dialect: 'postgres',
-    host: 'localhost'
+    dialect: 'sqlite',
+    host: 'localhost',
+    storage: './database.sqlite',
   }
 );
 
@@ -53,7 +54,7 @@ Conn.sync({ force: true }).then(()=> {
     }).then(person => {
       return person.createPost({
         title: `Sample post by ${person.firstName}`,
-        content: 'here is some content'
+        content: Faker.lorem.paragraphs(2),
       });
     });
   });

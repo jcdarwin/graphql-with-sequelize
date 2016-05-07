@@ -2,10 +2,11 @@
   "name": "relay-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "babel-node .",
+    "db": "babel-node db.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,11 @@
     "lodash": "^4.2.1",
     "pg": "^4.4.4",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^3.19.1"
+    "sequelize": "^3.19.1",
+    "sqlite3": "^3.1.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-eslint": "^6.0.4"
   }
 }
