@@ -96,6 +96,11 @@ const Query = new GraphQLObjectType({
       },
       posts: {
         type: new GraphQLList(Post),
+        args: {
+          title: {
+            type: GraphQLString
+          }
+        },
         resolve (root, args) {
           return Db.models.post.findAll({ where: args });
         }

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node .",
-    "db": "babel-node db.js"
+    "db": "babel-node db.js",
+    "sql2graphql": "sql2graphql --output-dir test --es6 -b sqlite --db-filename database.sqlite"
   },
   "author": "",
   "license": "ISC",

@@ -108,6 +108,20 @@ Once started, we can perform queries in the GraphiQL interface:
         }
     }
 
+## Generate a GraphQL schema from a SQL database
+
+We can use [sql-to-graphql](https://www.npmjs.com/package/sql-to-graphql) to generate our GraphQL schema from our SQLlite database: 
+
+    npm install -g sql-to-graphql
+
+    sql2graphql --output-dir test --es6 -b sqlite --database database.sqlite
+
+    cd /Users/jasondarwin/workspace/graphql-with-sequelize/test
+    npm install
+    npm start
+
+Then point your browser at http://localhost:3000
+
 
 ## Useful resources:
 
